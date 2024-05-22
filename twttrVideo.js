@@ -14,6 +14,10 @@ var mainSwiper = new Swiper('.swiper', {
     slideShadows: false,
   },
 
+  autoplay: {
+    delay: 3000,
+  },
+
   breakpoints: {
     // when window width is >= 320px
     // 320: {
@@ -43,22 +47,21 @@ var mainSwiper = new Swiper('.swiper', {
   thumbs: {
     swiper: {
       el: '.swiper-preview',
-      slidesPerView: 5,
-      // loop: true,
+      slidesPerView: 2,
+      breakpoints: {
+        390: {
+          slidesPerView: 3,
+        },
+        520: {
+          slidesPerView: 4,
+        },
+        640: {
+          slidesPerView: 5,
+        },
+      },
     },
   },
 });
-
-// var thumbsSwiper = new Swiper('.swiper-preview', {
-//   // Настройки миниатюрного Swiper
-//   slidesPerView: 3,
-//   // loop: true,
-//   // centeredSlides: true,
-// });
-
-// // Синхронизация основного и миниатюрного Swiper
-// mainSwiper.controller.control = thumbsSwiper;
-// thumbsSwiper.controller.control = mainSwiper;
 
 document.addEventListener('DOMContentLoaded', function () {
   MicroModal.init({
