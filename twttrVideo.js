@@ -1,11 +1,10 @@
-var mainSwiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
   slidesPerView: 1,
   initialSlide: 0,
   spaceBetween: 10,
   updateOnWindowResize: true,
   watchOverflow: true,
   centeredSlides: true,
-  // loop: true,
 
   effect: 'coverflow',
   coverflowEffect: {
@@ -16,27 +15,6 @@ var mainSwiper = new Swiper('.swiper', {
 
   autoplay: {
     delay: 3000,
-  },
-
-  breakpoints: {
-    // when window width is >= 320px
-    // 320: {
-    //   slidesPerView: 1,
-    // },
-    // // when window width is >= 480px
-    // 481: {
-    //   slidesPerView: 1.5,
-    // },
-    // when window width is >= 640px
-    // 820: {
-    //   slidesPerView: 1.5,
-    // },
-    // 1280: {
-    //   slidesPerView: 1.9,
-    // },
-    // 1600: {
-    //   slidesPerView: 2.5,
-    // },
   },
 
   navigation: {
@@ -66,10 +44,12 @@ var mainSwiper = new Swiper('.swiper', {
 document.addEventListener('DOMContentLoaded', function () {
   MicroModal.init({
     onShow: (modal) => {
+      document.body.style.overflow = 'hidden';
       const content = modal.querySelector('.modal__content');
       twttr.widgets.load(content);
     },
     onClose: (modal) => {
+      document.body.style.overflow = 'auto';
       const content = modal.querySelector('.modal__content');
       const twitterVideo = content.querySelector('.twitter-tweet');
       const originalContent = twitterVideo.innerHTML;
