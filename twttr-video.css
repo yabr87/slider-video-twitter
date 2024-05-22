@@ -38,7 +38,7 @@
   padding: 30px 10px;
   max-height: 100vh;
   border-radius: 4px;
-  overflow-y: auto;
+
   box-sizing: border-box;
 }
 
@@ -49,10 +49,7 @@
 }
 
 .modal__content {
-  margin-top: 2rem;
   margin-bottom: 2rem;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
 }
 
 .modal__btn {
@@ -75,6 +72,11 @@
 .modal__btn:focus,
 .modal__btn:hover {
   opacity: 0.8;
+}
+
+.twitter-tweet {
+  max-width: 100%;
+  width: 100%;
 }
 
 /**************************\
@@ -202,6 +204,7 @@
 .twitter-tweet {
   max-width: 100%;
   width: 100%;
+  min-width: 540px;
 }
 
 .swiper-image {
