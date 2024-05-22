@@ -38,8 +38,8 @@
   padding: 30px 10px;
   max-height: 100vh;
   border-radius: 4px;
-
   box-sizing: border-box;
+  max-width: 96vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -75,7 +75,8 @@
 }
 
 .twitter-tweet {
-  max-width: 100%;
+  position: relative;
+  max-width: 90vh;
   width: 100%;
 }
 
@@ -199,12 +200,6 @@
   max-width: 640px;
   width: 100%;
   overflow: hidden;
-}
-
-.twitter-tweet {
-  max-width: 100%;
-  width: 100%;
-  min-width: 540px;
 }
 
 .swiper-image {
