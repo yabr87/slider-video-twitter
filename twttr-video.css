@@ -50,6 +50,17 @@
 
 .modal__content {
   margin-bottom: 2rem;
+  width: 350px;
+  min-height: 235px;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .modal__content {
+    width: 540px;
+    min-height: 360px;
+    height: 100%;
+  }
 }
 
 .modal__btn {
