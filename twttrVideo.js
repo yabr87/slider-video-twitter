@@ -13,10 +13,6 @@ new Swiper('.swiper', {
     slideShadows: false,
   },
 
-  autoplay: {
-    delay: 3000,
-  },
-
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next',
@@ -39,30 +35,4 @@ new Swiper('.swiper', {
       },
     },
   },
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  MicroModal.init({
-    onShow: (modal) => {
-      document.body.style.overflow = 'hidden';
-      const content = modal.querySelector('.modal__content');
-      twttr.widgets.load(content);
-    },
-    onClose: (modal) => {
-      document.body.style.overflow = 'auto';
-      const content = modal.querySelector('.modal__content');
-      const twitterVideo = content.querySelector('.twitter-tweet');
-      const originalContent = twitterVideo.innerHTML;
-
-      // Приховування вмісту
-      twitterVideo.style.display = 'none';
-
-      // Показати вміст знову через невелику затримку
-      setTimeout(() => {
-        twitterVideo.style.display = 'block';
-        twitterVideo.innerHTML = originalContent;
-        twttr.widgets.load(twitterVideo);
-      }, 100);
-    },
-  });
 });
